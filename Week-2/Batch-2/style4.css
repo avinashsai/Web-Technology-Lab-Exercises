@@ -1,0 +1,17 @@
+h1{
+	background-color: white;
+	color:black;
+}
+p{
+	background-color: white;
+	color: black;
+}
+a{
+	color: blue;
+}
+a:visited{
+	color: purple;
+}
+a:active{
+	color:red; 
+}
