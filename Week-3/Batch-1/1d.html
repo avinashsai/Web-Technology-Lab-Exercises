@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-4</title>
+	<script type="text/javascript">
+		function checkprime()
+		{
+             var num=parseInt(form.num.value);
+             var f=0;
+             for(var i=2;i<num;i++)
+             	if(num%i==0){
+             		f=1;break;
+             	}
+             	if(f)
+             		document.getElementById("pri").innerHTML="Not a Prime";
+             	else
+             		document.getElementById("pri").innerHTML="Prime";
+		}
+		function checkall()
+		{
+			var i;
+			for(i=2;i<=1000;i++)
+			{
+				var f=0,j;
+				for(j=2;j<i;j++){
+					if(i%j==0){f=1;break;}
+				}
+				if(!f)
+					document.getElementById("prime").innerHTML+=i.toString()+" ";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>Enter the number:</h3><br>
+	<form id="form">
+	<input type="integer" name="num"/>
+</form><br>
+	<button onclick="checkprime()">submit</button>
+	<p>The Number is :</p>
+	<p id="pri"></p>
+	<h3>The prime number between 1 and 1000 are:</h3>
+	<button onclick="checkall()">Submit</button>
+	<textarea id="prime"></textarea>
+	</body>
+</html>
