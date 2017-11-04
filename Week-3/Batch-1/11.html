@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-1</title>
+	<script type="text/javascript">
+		function Calculate()
+		{
+			var radius=parseFloat(form.radius.value);
+			var volume=(4/3)*(Math.PI)*(radius)*(radius)*(radius);
+			var area=(Math.PI)*(radius)*(radius);
+            document.getElementById("vol").innerHTML=volume.toString();
+            document.getElementById("area").innerHTML=area.toString();
+		}
+	</script>
+</head>
+<body>
+	<form name="form">
+		<h2>Enter the Radius</h2>
+		<input type="integer" name="radius">
+		<p>The volume of sphere is:</p>
+		<p id="vol"></p>
+			<p>The area of sphere is:</p>
+			<p id="area"></p>
+		</form>
+		<br>
+		<button onclick="Calculate()">submit</button>
+</body>
+</htmL>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-2</title>
+	<script type="text/javascript">
+		function Calculatedistance()
+		{
+			x1=parseFloat(form.x1.value);
+			y1=parseFloat(form.y1.value);
+			x2=parseFloat(form.x2.value);
+			y2=parseFloat(form.y2.value);
+			var dis=Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+			document.getElementById("dis").innerHTML=dis.toString();
+		}
+	</script>
+</head>
+<body>
+	<form id="form">
+		<h2>Enter the first coordinates:</h2>
+		<h3>x1:</h3><input type="integer" name="x1"/><br>
+		<h3>y1:</h3><input type="integer" name="y1"/>
+		<h2>Enter the second coordinates</h2>
+		<h3>x2:</h3><input type="integer" name="x2"/><br>
+		<h3>y2:</h3><input type="integer" name="y2"/><br>
+	</form>
+	<button onclick="Calculatedistance()">Submit</button>
+	<p>The distance between two points are:</p>
+	<p id="dis"></p>
+	</body>
+</html>
