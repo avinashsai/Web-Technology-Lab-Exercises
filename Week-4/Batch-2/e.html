@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Question-5</title>
+<script type="text/javascript">
+function count() {
+    var a = document.getElementById("sent").value.split(" ");
+    var lengths = [];
+    for(var i = 0; i < a.length; i++) {
+        if(lengths[a[i].length] === undefined)
+            lengths[a[i].length] = 0
+        lengths[a[i].length]++;
+    }
+    for(var i=0;i<lengths.length;i++)
+        if(lengths[i]===undefined)
+            lengths[i]=0;
+    s = "<table><tr><th>Word length</th><th>Occurrences</th></tr>";
+    for(var i = 1; i < lengths.length; i++) {
+        s += "<tr><td>"+i+"</td><td>"+(lengths[i])+"</td></tr>"
+    }
+    s+="</table>"
+    document.body.innerHTML += (s);
+}
+</script>
+</head>
+<body>
+Text: <textarea id="sent"></textarea><br>
+<button onclick="count()">click</button>
+</body>
+</html>
