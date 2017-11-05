@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-1</title>
+	<script type="text/javascript">
+		function checksub()
+		{
+			var str1=f.str.value;
+			var str2=f1.substr.value;
+			var m=str1.length;
+			var n=str2.length;
+			var i=0,j=0;
+			var ind=-1;
+			for(i=0;i<m-n+1;i++)
+			{
+              var f=0;
+              for(j=0;j<n;j++){
+              	if(str1[i+j]!=str2[j]){
+              		f=1;break;}
+              	}
+              	if(!f){
+              		ind=i;
+              		break;
+              	}
+			}
+			if(ind>=0)
+				document.getElementById("result1").innerHTML+="sub string found at index "+ind.toString();
+			else
+				document.getElementById("result1").innerHTML+="Substring not found";
+		}
+		function charat()
+		{
+			var str1=f.str.value
+			var ind=f2.index.value;
+			document.getElementById("result2").innerHTML+="character at index "+ind.toString()+": "+str1[ind].toString();
+		}
+		function stringmerge()
+		{
+			var str1=f.str.value;
+			var str2=f3.merge.value;
+			var n=str2.length;
+			for(i=0;i<n;i++)
+				str1+=str2[i];
+			document.getElementById("result3").innerHTML=str1;
+		}
+	</script>
+	</head>
+	<body>
+		<form id="f">
+			<h3>Enter the string:</h3>
+			<input type="text" name="str"/><br>
+		</form><br>
+		<form id="f1">
+			<h3>Enter the substring:</h3>
+			<input type="text" name="substr"/><br>
+		</form><br>
+		<h2>To check substring press this button</h2>
+		<button onclick="checksub()">submit</button><br>
+		<h2>The substring is found at:</h2>
+		     <p id="result1"></p>
+		</form><br>
+		<form id="f2">
+			<h3>Enter the index:</h3>
+			<input type="integer" name="index"/><br>
+		</form>
+		<h2>To know character press this button</h2>
+		<button onclick="charat()">submit</button><br>
+		<h2>The character at index is:</h2>
+		<p id="result2"></p>
+		<form id="f3">
+			<h3>Enter the string to merge:</h3>
+			<input type="text" name="merge"/><br>
+		</form><br>
+		<h2>To concatenate press this </h2>
+		<button onclick="stringmerge()">submit</button>
+         <h2>The final string is:</h2>
+         <p id="result3"></p>
+	</body>
+</html>

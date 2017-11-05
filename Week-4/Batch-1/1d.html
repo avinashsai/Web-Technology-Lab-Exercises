@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-4</title>
+	<script type="text/javascript">
+		function dateandtime()
+		{
+			var d=new Date();
+			var h=d.getHours();
+			document.getElementById("result").innerHTML+=d+"   ";
+			if(h>=6 && h<=10)
+            document.getElementById("result").innerHTML+="Good Morning";
+        else if(h>=11 && h<=15)
+        	document.getElementById("result").innerHTML+="Good Afternoon";
+        else if(h>=16 && h<=20)
+        	document.getElementById("result").innerHTML+="Good Evening";
+        else
+        	document.getElementById("result").innerHTML+="Good night";
+		}
+	</script>
+	</head>
+	<body>
+		<h3>click here to view date and time</h3>
+		<button onclick="dateandtime()">show</button><br>
+		<p id="result"></p>
+	</body>
+</html>

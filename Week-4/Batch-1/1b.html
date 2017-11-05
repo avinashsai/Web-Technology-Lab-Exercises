@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-2</title>
+	<script type="text/javascript">
+		function low2high()
+		{
+			var st=f1.strin1.value;
+			var newstr;
+			newstr=st.toUpperCase();
+			document.getElementById("l2h").innerHTML=newstr;
+		}
+		function high2low()
+		{
+			var st=f2.strin2.value;
+			var newstr;
+			newstr=st.toLowerCase();
+			document.getElementById("h2l").innerHTML=newstr;
+		}
+	</script>
+	</head>
+	<body>
+		<form id="f1">
+			<h3>Enter the lower case alphabets:</h3>
+			<input type="text" name="strin1"/><br>
+		</form>
+			<button onclick="low2high()">submit</button>
+			<h3>The uppercase string is :</h3>
+			<p id="l2h"></p>
+		<form id="f2">
+			<h3>Enter the upper case alphabets:</h3>
+			<input type="text" name="strin2"/><br>
+		</form>
+			<button onclick="high2low()">submit</button>
+			<h3>The lower case string is :</h3>
+			<p id="h2l"></p>
+	</body>
+</html>

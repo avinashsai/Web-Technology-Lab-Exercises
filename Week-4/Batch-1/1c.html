@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-3</title>
+	<script type="text/javascript">
+		function letter()
+		{
+			var s=f.st.value;
+			var n=s.length;
+			var p;
+			for(var i=0;i<n;i++)
+			{
+				for(var j=i+1;j<n;j++)
+				{
+					for(var k=j+1;k<n;k++)
+                     {
+                     	p=s.charAt(i)+s.charAt(j)+s.charAt(k);
+                     	document.getElementById("3lw").innerHTML+=p+" ";
+                     }
+				}
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<form id="f">
+			<h3>Enter the string:</h3>
+			<input type="text" name="st"/>
+		</form><br>
+		<button onclick="letter()">submit</button><br><br>
+		<p id="3lw"></p>
+	</body>
+</html>
