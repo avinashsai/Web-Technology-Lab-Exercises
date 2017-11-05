@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-1</title>
+	<script type="text/javascript">
+		function checkmultiple()
+		{
+			var fi=parseInt(form.first.value);
+			var se=parseInt(form.second.value);
+			if(se%fi==0)
+				document.getElementById("result").innerHTML="Yes first integer is a multiple of second";
+			else
+				document.getElementById("result").innerHTML="No first integer is not a multiple of second";
+		}
+	</script>
+	</head>
+	<body>
+		<form id="form">
+			<h2>Enter the first(smallest) integer: </h2>
+			<input type="integer" name="first"/><br>
+			<h2>Enter the second(largest) integer: </h2>
+			<input type="integer" name="second"/><br>
+		</form><br>
+		<button onclick="checkmultiple()">submit</button>
+		<h2>The result is:</h2>
+		<p id="result"></p>
+	</body>
+</html>

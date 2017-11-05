@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-3</title>
+	<script type="text/javascript">
+		function calpower()
+		{
+              var b=parseInt(form.base.value);
+              var e=parseInt(form.exponent.value);
+              var v=1,i=1;
+               for(i=1;i<=e;i++)
+               	v=v*b;
+              document.getElementById("val").innerHTML=v.toString();
+		}
+	</script>
+	</head>
+	<body>
+		<form id="form">
+			<h3>Enter the base value:</h3>
+			<input type="decimal" name="base"/><br>
+			<h3>Enter the exponent value:</h3>
+			<input type="decimal" name="exponent"/><br>
+		</form><br>
+		<button onclick="calpower()">Submit</button>
+		<p>The result is:</p>
+		<p id="val"></p>
+	</body>
+</html>
