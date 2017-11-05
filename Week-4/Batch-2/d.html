@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-4</title>
+	<script type="text/javascript">
+		var a=new Array(50),n;
+		function input(){
+           n=parseInt(window.prompt("enter the number of elements"));
+		for(var i=0;i<n;i++)
+			a[i]=parseInt(window.prompt("Enter the element"));
+		a.sort();
+    }
+    function cal()
+    {
+    	var l=0,h=n-1,ind=-1;
+        var s=parseInt(f1.key.value);
+        for(var i=0;i<n;i++){
+        	if(a[i]==s){
+        		ind=i;break;
+        	}
+        }
+        if(ind!=-1)
+        	f2.result.value="FOUND AT "+ind.toString();
+        else
+        	f2.result.value="NOT FOUND";
+    }
+	</script>
+</head>
+<body>
+	<button onclick="input()">input</button>
+<form id="f1">
+	<h3>Enter the search key:<input type="text" name="key"/></h3><br>
+</form>
+<button onclick="cal()">cal</button>
+<h3>Search result:</h3>
+<form id="f2">
+<input type="text" name="result"/>
+</form>
+</body>
+</html>

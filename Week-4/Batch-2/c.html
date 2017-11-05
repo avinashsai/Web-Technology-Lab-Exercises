@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-4</title>
+	<script type="text/javascript">
+		var a=new Array(),n;
+		function input()
+		{
+			n=parseInt(window.prompt("Enter the number of strings"));
+			for(var i=0;i<n;i++)
+				a[i]=window.prompt("Enter the string");
+		}
+		function sorted()
+		{
+			a.sort();
+			document.getElementById("result").innerHTML=a;
+		}
+	</script>
+	</head>
+	<body>
+		<button onclick="input()">input</button><br><br><br>
+		<button onclick="sorted()">sort</button><br>
+		<h3>The Result is :</h3>
+		<p id="result"></p>
+	</body>
+</html>
