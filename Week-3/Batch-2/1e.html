@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-5</title>
+	<script type="text/javascript">
+		function argmstrong(num)
+		{
+            var temp=num,sum=0;
+            while(temp)
+            {
+            	var l=temp%10;
+            	sum+=l*l*l;
+            	temp=parseInt(temp/10);
+            }
+
+             if(sum==num)
+             	return 1;
+             else
+             	return 0;
+          }
+          function argmstrong1() {
+             var n=parseInt(form.num.value);
+             var res=argmstrong(n);
+             if(res)
+             	document.getElementById("result").innerHTML="Yes it is an armstrong number";
+             else
+             	document.getElementById("result").innerHTML="No it is not an armstrong number";
+          }
+          function checkall(){
+          	var res;
+          	for(var i=100;i<=5000;i++){
+          		res=argmstrong(i);
+          	if(res)
+             	document.getElementById("argm").innerHTML+=i.toString()+" ";
+         }
+          }
+	</script>
+	</head>
+	<body>
+     <form id="form">
+     	<h2>Enter the number:</h2><br>
+     	<input type="integer" name="num"/><br>
+     </form>
+     	<button onclick="argmstrong1()">submit</button>
+     	<p id="result"></p>
+     	<button onclick="checkall()">submit</button>
+     	<textarea id="argm"></textarea>
+	</body>
+</html>
