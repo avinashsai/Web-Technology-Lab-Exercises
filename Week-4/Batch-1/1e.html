@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+	<title>Question-5</title>
+	<script type="text/javascript">
+		function calculate(){
+		var n=parseInt(window.prompt("Enter the number of elements"));
+		var a=new Array(n);
+		for(var i=0;i<n;i++)
+			a[i]=parseInt(window.prompt("Enter the element"));
+		a.sort();
+		document.getElementById("result").innerHTML=a;
+	}
+	</script>
+	</head>
+	<body>
+		<button onclick="calculate()">submit</button>
+     <p id="result"></p>
+	</body>
+</html>
